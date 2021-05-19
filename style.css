@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+overflow: hidden;
+background: #fff;
+min-height: 100vh;
+}
+
+section {
+height: 100vh;
+}
+
+span {
+    width:0;
+    height:0;
+    border: solid;
+    position: absolute;
+    pointer-events: none;
+    border-color: transparent transparent #fff transparent;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate
+{
+  0%
+  {
+      transform: scale(0) translateY(0) rotate(0deg);
+      opacity: 0;
+  }
+
+  30%
+  {
+      opacity: 1;
+  }
+
+  90%
+  {
+      opacity: 1;
+  }
+
+  100%
+  {
+      transform: scale(0.5) translateY(-500%) rotate(190deg);
+      opacity: 0;
+  }
+
+}
