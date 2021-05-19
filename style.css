@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -5,12 +7,88 @@
 body {
 overflow: hidden;
 background: #fff;
-min-height: 100vh;
+
+
 }
 
 section {
 height: 100vh;
+
 }
+
+.container {
+max-width:1200px;
+height: 100vh;
+margin: 0 auto;
+
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.textStyle {
+font-family: 'Black Ops One', cursive;
+font-style: normal;
+font-weight: 400;
+font-size: 1200%;
+color: rgb(255 184 0);
+cursor: pointer;
+position: relative;
+z-index: 1;
+
+}
+
+.textStyle div {
+    transition: all 0.5s ease;
+}
+.textStyle div:nth-child(odd){
+    color: #3f51b5;
+}
+
+.textStyle div:nth-child(odd):hover{
+    color: #5067e6;
+    transform: translateY(-30%);
+}
+
+.textStyle div:nth-child(even):hover{
+    color:#facf22;
+    transform: translateY(-30%);
+}
+
+@media (max-width:1024px){
+    .container {
+        width: 100%;
+    }
+    .textStyle{
+        font-size: 500%;
+        
+    }
+}
+@media (max-width:768px){
+    .container {
+        width: 100%;
+    }
+    .textStyle{
+        font-size: 400%;
+    }
+}
+
+
+@media (max-width:767px){
+    .container {
+        width: 100%;
+    }
+    .textStyle{
+        font-size: 400%;
+    }
+}
+
+
 
 span {
     width:0;
