@@ -1,4 +1,6 @@
 ;(function(){
+    
+
     const colors = [
     '#95cffc',
     '#f78fb3',

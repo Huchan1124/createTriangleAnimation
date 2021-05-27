@@ -8,19 +8,16 @@ body {
 overflow: hidden;
 background: #fff;
 
-
 }
 
 section {
 height: 100vh;
-
 }
 
 .container {
 max-width:1200px;
 height: 100vh;
 margin: 0 auto;
-
 }
 
 .header {
@@ -35,8 +32,7 @@ margin: 0 auto;
 font-family: 'Black Ops One', cursive;
 font-style: normal;
 font-weight: 400;
-/* font-size: 1200%; */
-font-size: 1600%; 
+font-size: 1200%; 
 color: rgb(255 178 218);
 cursor: pointer;
 position: relative;
@@ -45,30 +41,55 @@ z-index: 1;
 }
 
 .textStyle div {
-    transition: all 0.5s ease;
+    transition: all 1s ease;
+    animation: sizeChange alternate 2s linear infinite;
+    
+   
+    
 }
 .textStyle div:nth-child(odd){
     color: #7dd6cf;
+ 
 }
 
-.textStyle div:nth-child(odd):hover{
+.textStyle div:nth-child(even){
+    color: rgb(255 178 218);
+}
+
+
+
+
+.textStyle div:nth-child(odd):hover {
     color: #5067e6;
-    transform: translateY(-30%);
+    transform: translateY(-30%) ;
+    /* animation: positionChange alternate 0.5s ease-out; */
 }
 
 .textStyle div:nth-child(even):hover{
     color:#facf22;
     transform: translateY(-30%);
+    /* animation: positionChange alternate 0.5s ease-out; */ 
 }
+
+.audio {
+    position: absolute;
+    bottom:  2%;
+    right: 2%;
+    z-index: 2;
+}
+
 
 @media (max-width:1024px){
     .container {
         width: 100%;
     }
     .textStyle{
-        font-size: 1200%;
+        font-size: 900%;
         
     }
+   
+
+
 }
 @media (max-width:768px){
     .container {
@@ -85,7 +106,7 @@ z-index: 1;
         width: 100%;
     }
     .textStyle{
-        font-size: 400%;
+        font-size: 500%;
     }
 }
 
@@ -100,6 +121,44 @@ span {
     border-color: transparent transparent #fff transparent;
     animation: animate 5s linear infinite;
 }
+
+@keyframes sizeChange{
+    0%
+    {
+        transform: scale(1);
+     
+    }
+
+    50%
+    {
+        transform: scale(0.95);
+     
+    }
+
+
+    100%
+    {
+        transform: scale(1);
+      
+    }
+}
+
+@keyframes positionChange{
+    0%
+    {
+        transform: translateY(0%);
+     
+    }
+
+
+
+    100%
+    {
+        transform: translateY(-30%);
+      
+    }
+}
+
 
 @keyframes animate
 {
